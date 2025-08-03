@@ -1,4 +1,4 @@
-# KISS-markdown-viewer
+# KISS Markdown Viewer
 
 **Contributors:** KISS Plugins  
 **Tags:** markdown, viewer, parsedown, admin, shortcode  
