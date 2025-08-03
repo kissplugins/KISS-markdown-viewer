@@ -1,15 +1,15 @@
 # KISS-markdown-viewer
 
-**Contributors:** KISS Plugins
-**Tags:** markdown, viewer, parsedown, admin, shortcode
-**Requires at least:** 5.0
-**Tested up to:** 6.4
-**Stable tag:** 1.0.0
-**License:** GPLv2 or later
-**License URI:** [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
-**Plugin URI:** [https://github.com/kissplugins/KISS-markdown-viewer](https://github.com/kissplugins/KISS-markdown-viewer)
+**Contributors:** KISS Plugins  
+**Tags:** markdown, viewer, parsedown, admin, shortcode  
+**Requires at least:** 5.0  
+**Tested up to:** 6.4   
+**Stable tag:** 1.0.0  
+**License:** GPLv2 or later  
+**License URI:** [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)  
+**Plugin URI:** [https://github.com/kissplugins/KISS-markdown-viewer](https://github.com/kissplugins/KISS-markdown-viewer)  
 **Author:** KISS Plugins
-**Author URI:** [https://kissplugins.com](https://kissplugins.com)
+**Author URI:** [https://kissplugins.com](https://kissplugins.com)  
 
 A lightweight “Keep It Simple, Stupid” Markdown viewer for WordPress. Render `.md` files in the admin area or on the front end with minimal setup. Other plugins can hook in or fall back if it’s not installed.
 
