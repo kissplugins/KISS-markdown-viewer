@@ -1,4 +1,4 @@
-# KISS-markdown-viewer
+# KISS Markdown Viewer
 
 **Contributors:** KISS Plugins  
 **Tags:** markdown, viewer, parsedown, admin, shortcode  
@@ -41,13 +41,13 @@ A lightweight “Keep It Simple, Stupid” Markdown viewer for WordPress. Render
 ### Front-End Shortcode
 
 ```php
-echo do_shortcode( '[md_render file="docs/my-doc.md"]' );
+echo do_shortcode( '[kiss_mdv_render file="docs/my-doc.md"]' );
 ```
 
 Or directly in post/page content:
 
 ```
-[md_render file="docs/my-doc.md"]
+[kiss_mdv_render file="docs/my-doc.md"]
 ```
 
 ## Developer API
@@ -55,8 +55,8 @@ Or directly in post/page content:
 Programmatically render Markdown:
 
 ```php
-if ( function_exists( 'wp_md_render_file' ) ) {
-    $html = wp_md_render_file( '/path/to/file.md' );
+if ( function_exists( 'kiss_mdv_render_file' ) ) {
+    $html = kiss_mdv_render_file( '/path/to/file.md' );
 } else {
     // Fallback logic
 }
@@ -64,28 +64,28 @@ if ( function_exists( 'wp_md_render_file' ) ) {
 
 ## Shortcode
 
-* **Tag:** `[md_render file="relative/path/to.md"]`
+* **Tag:** `[kiss_mdv_render file="relative/path/to.md"]`
 * **Attributes:**
 
   * `file` (required) – Path relative to the plugin root directory.
 
 ## Filters & Actions
 
-* **Filter:** `wp_md_renderer_html`
+* **Filter:** `kiss_mdv_renderer_html`
   Modify the rendered HTML before output:
 
   ```php
-  add_filter( 'wp_md_renderer_html', function( $html, $file ) {
+  add_filter( 'kiss_mdv_renderer_html', function( $html, $file ) {
       // Alter $html as needed
       return $html;
   }, 10, 2 );
   ```
 
-* **Suggested Action:** `wp_md_renderer_before_render`
+* **Suggested Action:** `kiss_mdv_renderer_before_render`
   Hook before parsing:
 
   ```php
-  add_action( 'wp_md_renderer_before_render', function( $file ) {
+  add_action( 'kiss_mdv_renderer_before_render', function( $file ) {
       // Pre-render logic
   } );
   ```
