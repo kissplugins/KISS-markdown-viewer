@@ -139,10 +139,17 @@ add_shortcode( 'kiss_mdv_render', 'wp_kiss_mdv_renderer_shortcode' );
  * Module 6: Expose function_exists check for other plugins
  *
  * Other plugins should do:
- * if ( function_exists('kiss_mdv_render_file') ) {
- *     $html = kiss_mdv_render_file( $my_md_path );
+ * if ( function_exists( 'kiss_mdv_render_file' ) ) {
+ *     $html = kiss_mdv_render_file( '/path/to/file.md' );
  * } else {
- *     // fallback logic
+ *     // Fallback to plain text rendering
+ *     $markdown_file = '/path/to/file.md';
+ *     if ( file_exists( $markdown_file ) ) {
+ *         $content = file_get_contents( $markdown_file );
+ *         $html    = '<pre>' . esc_html( $content ) . '</pre>';
+ *     } else {
+ *         $html = 'Markdown file not found.';
+ *     }
  * }
  */
 // Nothing extra to register; presence of function suffices.

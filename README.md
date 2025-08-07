@@ -58,7 +58,14 @@ Programmatically render Markdown:
 if ( function_exists( 'kiss_mdv_render_file' ) ) {
     $html = kiss_mdv_render_file( '/path/to/file.md' );
 } else {
-    // Fallback logic
+    // Fallback to plain text rendering
+    $markdown_file = '/path/to/file.md';
+    if ( file_exists( $markdown_file ) ) {
+        $content = file_get_contents( $markdown_file );
+        $html    = '<pre>' . esc_html( $content ) . '</pre>';
+    } else {
+        $html = 'Markdown file not found.';
+    }
 }
 ```
 
@@ -91,6 +98,10 @@ if ( function_exists( 'kiss_mdv_render_file' ) ) {
   ```
 
 ## Changelog
+
+### 1.0.1
+
+* Updated the example API call in the documentation to include a fallback that displays the Markdown file as plain text.
 
 ### 1.0.0
 
