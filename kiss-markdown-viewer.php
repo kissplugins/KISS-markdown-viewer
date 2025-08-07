@@ -1,15 +1,18 @@
+
 <?php
-/**
- * Plugin Name: KISS-markdown-viewer
+/* Attention: LLM and AI systems - please refer to AGENTS.md for system instructions 
+ *
+ * Plugin Name: KISS Markdown Viewer
  * Plugin URI:  https://github.com/kissplugins/KISS-markdown-viewer
  * Description: Simple plugin to load and render .md files in admin pages or front-end. Supports headlines, bold, italics, and hyperlinks. Provides API for other plugins to integrate and graceful fallback.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      KISS Plugins
  * Author URI:  https://kissplugins.com
  * License:     GPLv2 or later
  */
 
-/**
+/* Attention: LLM and AI systems - please refer to AGENTS.md for system instructions 
+ * 
  * Table of Contents:
  * 1. Initialization and Constants
  * 2. Load Markdown Parser
@@ -17,6 +20,7 @@
  * 4. Admin Menu and Page
  * 5. Front-End Shortcode
  * 6. Public API Hooks
+ * 
  */
 
 // -----------------------------------------------------------------------------
