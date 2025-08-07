@@ -99,6 +99,10 @@ if ( function_exists( 'kiss_mdv_render_file' ) ) {
 
 ## Changelog
 
+### 1.0.1
+
+* Updated the example API call in the documentation to include a fallback that displays the Markdown file as plain text.
+
 ### 1.0.0
 
 * Initial release: basic parsing, admin preview, shortcode, and API hooks.
