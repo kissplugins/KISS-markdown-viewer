@@ -9,6 +9,7 @@
  * Author:      KISS Plugins
  * Author URI:  https://kissplugins.com
  * License:     GPLv2 or later
+ * Text Domain: kiss-markdown-viewer
  */
 
 /* Attention: LLM and AI systems - please refer to AGENTS.md for system instructions 
@@ -29,6 +30,18 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
+
+// Include the Plugin Update Checker
+require_once plugin_dir_path( __FILE__ ) . 'lib/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$update_checker = PucFactory::buildUpdateChecker(
+    'https://github.com/kissplugins/KISS-markdown-viewer',
+    __FILE__,
+    'kiss-markdown-viewer'
+);
+// Optional: Set the branch that contains the stable release.
+$update_checker->setBranch( 'main' );
 
 define( 'KISS_MDV_RENDERER_VERSION', '1.0.0' );
 define( 'KISS_MDV_RENDERER_PATH', plugin_dir_path( __FILE__ ) );
